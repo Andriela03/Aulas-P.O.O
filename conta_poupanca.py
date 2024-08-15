@@ -11,6 +11,9 @@ class Conta_poupanca(Conta_bancaria):
     def render(self, redimento):
         self.render = redimento * (2/100)
 
+    def ver_redimento(self):
+        return f'Redimento da conta: {self.redimento}'
+
 
 
 

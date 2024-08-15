@@ -16,7 +16,7 @@ class Conta_bancaria:
     def sacar(self, sacar):
         if sacar <= self.saldo:
             self.sacar =  self.saldo - sacar 
-            return 'Valor sacado'
+            return f'Valor sacado {self.sacar:.2f}'
 
         else:
             print('Você não possui esse valor em seu saldo')
