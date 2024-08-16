@@ -1,23 +1,15 @@
 from conta_bancaria import Conta_bancaria
 
 class Conta_poupanca(Conta_bancaria):
-    def __init__(self, titular, cpf, saldo, redimento):
+    def __init__(self, titular, cpf, saldo, taxa_rendimento):
         super().__init__(titular, cpf, saldo)
-        self.redimento = redimento 
+        self.taxa_rendimento = taxa_rendimento 
 
-    def ver_redimento(self):
-        return f'Redimento da conta: {self.ver_redimento}'
+    def calcular_rendimento(self):
+        rendimento = self.saldo * (self.taxa_rendimento / 100)
+        return f'Rendimento da conta: {rendimento:.2f}'
 
-    def render(self, redimento):
-        self.render = redimento * (2/100)
-
-    def ver_redimento(self):
-        return f'Redimento da conta: {self.redimento}'
-
-
-
-
-
-
-
-
+    def aplicar_rendimento(self):
+        rendimento = self.saldo * (self.taxa_rendimento / 100)
+        self.saldo += rendimento
+        return f'Rendimento de {rendimento:.2f} aplicado. Novo saldo: {self.saldo:.2f}'

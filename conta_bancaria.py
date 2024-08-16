@@ -5,25 +5,18 @@ class Conta_bancaria:
         self.saldo = saldo 
 
     def mostrar_conta(self):
-        return f'Titular: {self.titular} CPF:{self.cpf} Saldo{self.saldo:.2f}'
+        return f'Titular: {self.titular} CPF: {self.cpf} Saldo: {self.saldo:.2f}'
     
-    def depositar(self, depositar):
-        self.depositar = depositar
-        self.depositar = self.saldo + depositar 
-        return f'O valor a ser depositado é: {self.depositar}'
+    def depositar(self, valor):
+        self.saldo += valor
+        return f'O valor de {valor:.2f} foi depositado com sucesso. Saldo atual: {self.saldo:.2f}'
 
-
-    def sacar(self, sacar):
-        if sacar <= self.saldo:
-            self.sacar =  self.saldo - sacar 
-            return f'Valor sacado {self.sacar:.2f}'
-
+    def sacar(self, valor):
+        if valor <= self.saldo:
+            self.saldo -= valor
+            return f'Você sacou {valor:.2f}. Saldo restante: {self.saldo:.2f}'
         else:
-            print('Você não possui esse valor em seu saldo')
+            return 'Você não possui saldo suficiente para esse saque.'
 
     def verificar_saldo(self):
-        return f'Saldo: {self.saldo}'
-
-
-
-
+        return f'Saldo: {self.saldo:.2f}'
