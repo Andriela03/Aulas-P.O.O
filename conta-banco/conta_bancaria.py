@@ -8,7 +8,7 @@ class Conta_bancaria:
         return f'Titular: {self.titular} CPF: {self.cpf} Saldo: {self.saldo:.2f}'
     
     def depositar(self, valor):
-        self.saldo += valor
+        valor += self.saldo
         return f'O valor de {valor:.2f} foi depositado com sucesso. Saldo atual: {self.saldo:.2f}'
 
     def sacar(self, valor):

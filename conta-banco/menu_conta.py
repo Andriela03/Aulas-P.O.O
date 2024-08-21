@@ -5,27 +5,33 @@ from conta_poupanca import Conta_poupanca
 print('***Bem-vindo ao banco do Brasil***')
 print("1) Entrar")
 print("2) Cadastrar uma conta")
+print('3) SAIR ')
 
 opcao = int(input('Digite sua opção: '))
+
+Conta_bancaria = []
+
 
 if opcao == 1:
     titular = str(input('Digite seu nome completo: '))
     cpf = int(input("Digite o seu CPF: "))
     n_conta = float(input('Digite o número da sua conta: '))
     print(f'Seja bem-vindo {titular}')
-    opcoes = int(input('Informe o que deseja fazer: \n1) Sacar \n 2) Depositar \n 3) Ver o saldo \n 4) Conta Corrente \n 5) Conta Poupança \n 6) SAIR'))
+
+    opcoes = int(input('Informe o que deseja fazer: \n1) Sacar \n 2) Depositar \n 3) Ver o saldo \n 4) Conta Corrente \n 5) Conta Poupança \n 6) SAIR \n'))
 
     if opcoes == 1:
         sacar = float(input('Informe quanto você quer sacar: '))
         print(Conta_bancaria.sacar())
 
-    elif opcoes == 2:
-        depositar = float(input('Quanto você deseja depositar?'))
+    elif opcoes == 2: 
+        saldo = 0
+        valor1 = float(input('Quanto você deseja depositar?' ))
         print(Conta_bancaria.depositar())
         print('O valor foi depositado com sucesso')
 
     elif opcoes == 3:
-        Conta_bancaria.saldo()
+        print(Conta_bancaria.saldo())
     elif opcoes == 4:
         print('Informações da sua conta corrente:', Conta_corrente.mostrarcc())
 
