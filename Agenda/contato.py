@@ -1,4 +1,4 @@
-from data import Data
+from Agenda.data import Data
 
 class Contato:
     def __init__(self, nome, telefone, data_nascimento):

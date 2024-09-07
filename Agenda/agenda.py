@@ -1,4 +1,4 @@
-from contato import Contato
+from Agenda.contato import Contato
 
 class Agenda:
     def __init__(self):
