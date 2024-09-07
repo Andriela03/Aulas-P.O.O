@@ -1,8 +1,8 @@
 from autor import Autor
 
 class Livro(Autor):
-    def __init__(self, nome, nacionalidade, dataNascimento, titulo, anoPublicacao):
-        super().__init__(nome, nacionalidade, dataNascimento)
+    def __init__(self, nome, nacionalidade, data_nascimento, titulo, anoPublicacao):
+        super().__init__(nome, nacionalidade, data_nascimento)
         self.__titulo = titulo
         self.__anoPublicacao = anoPublicacao
 
@@ -18,7 +18,7 @@ class Livro(Autor):
     def set_anoPublicacao(self, anoPublicacao):
         self.__anoPublicacao = anoPublicacao
 
-    def exibirLivro(self):
+    def exibir_livro(self):
         print(f'Título: {self.__titulo}')
         print(f'Autor: {self.__nome}')
         print(f'Ano de Publicação: {self.__anoPublicacao}')
