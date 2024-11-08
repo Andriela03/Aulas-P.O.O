@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Ovo",
+        "preco": 0.8,
+        "quantidade": 100
+    },
+    {
+        "nome": "Salmao",
+        "preco": 79.9,
+        "quantidade": 10
+    },
+    {
+        "nome": "Espinafre",
+        "preco": 8.0,
+        "quantidade": 30
+    }
+]
