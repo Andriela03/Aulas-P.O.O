@@ -1,6 +1,6 @@
-from Biblioteca import Biblioteca
+from json.biblioteca.Biblioteca import Biblioteca
 from Livro import Livro
-from Autor import Autor
+from json.biblioteca.Autor import Autor
 
 biblioteca = Biblioteca()
 opcao = "0"

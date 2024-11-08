@@ -1,4 +1,4 @@
-from Autor import Autor
+from json.biblioteca.Autor import Autor
 
 class Livro:
     def __init__(self, titulo, autor, anoPublicacao):
