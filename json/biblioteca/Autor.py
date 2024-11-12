@@ -33,3 +33,4 @@ class Autor:
             "nacionalidade": self.__nacionalidade,
             "dataNascimento": self.__dataNascimento
         }
+        
