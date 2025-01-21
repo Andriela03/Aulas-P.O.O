@@ -2,6 +2,9 @@ from tkinter import *
 import tkinter
 from datetime import datetime
 
+
+import pyglet
+pyglet.font.add_file("interface-grafica\relogio_Atividade\digital-7.ttf")
 #Cores
 
 cor1 = '#3d3d3d' #Preto
@@ -29,12 +32,14 @@ def relogio():
     mes = tempo.strftime("%b") #B maiúsculo = "Janeiro", b minúsculo = "Jan" 
     ano = tempo.strftime("%Y") 
     l1.config(text=hora)
+    l1.after(200, relogio)
+    l2.config(text=dia_semana + " " + str(dia) + "/" +str(mes) + "/" + str(ano))
 
-l1 = Label(janela, font=("Arial 80"), bg = fundo, fg = cor)
+l1 = Label(janela, font=("digital-7 100"), bg = cor1, fg = cor)
 l1.grid(row = 0, column = 0, sticky = NW, padx = 5) 
 
-l1 = Label(janela, text="21/01/25", font=("Arial 20"), bg = fundo, fg = cor4)
-l1.grid(row = 0, column = 0, sticky = NW, padx = 5)
+l2 = Label(janela, font=("digital-7 17"), bg = cor1, fg = cor)
+l2.grid(row = 1, column = 0, sticky = NW, padx = 5)
 
 relogio()
 
